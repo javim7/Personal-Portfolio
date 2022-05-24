@@ -1,6 +1,6 @@
 import './App.css';
 import { Route, Routes } from "react-router-dom";
-import {lightTheme, darkTheme} from './components/Themes'
+import {lightTheme} from './components/Themes'
 import { ThemeProvider } from 'styled-components'
 import GlobalStyle from './globalStyles'
 

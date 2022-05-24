@@ -2,9 +2,11 @@ import React, { useState } from 'react'
 import { NavLink } from 'react-router-dom'
 import styled, { keyframes } from 'styled-components'
 import { YinYang } from '../components/AllSvgs'
+import Intro from '../components/Intro'
 import LogoSubComp from '../subComponents/LogoSubComp'
 import PwrBtn from '../subComponents/PwrBtn'
 import SocialSubComp from '../subComponents/SocialSubComp'
+import {motion} from 'framer-motion'
 
 const MainContainer = styled.div`
 background: ${props => props.theme.body};
@@ -43,7 +45,7 @@ z-index: 1;
 `
 
 const Work = styled(NavLink)`
-color: ${props => props.theme.text};
+color: ${props => props.click ? props.theme.body : props.theme.text};
 position: absolute;
 top: 50%;
 left: calc(1rem + 2vw);
@@ -63,7 +65,7 @@ justify-content: space-evenly;
 `
 
 const About = styled(NavLink)`
-color: ${props => props.theme.text};
+color: ${props => props.click ? props.theme.body : props.theme.text};
 text-decoration: none;
 z-index: 1;
 `
@@ -108,6 +110,18 @@ transition: all 1s ease;
 }
 `
 
+const DarkDiv = styled.div`
+position: absolute;
+top: 0;
+bottom: 0;
+right: 50%;
+width: ${props => props.click ? '50%' : '0%'};
+height: ${props => props.click ? '100%' : '0%'};
+z-index: 1;
+background-color: #000;
+transition: height 0.5s ease, width 1s ease 0.5s;
+`
+
 const Main = () => {
 
   const [click, setClick] = useState(false)
@@ -116,42 +130,59 @@ const Main = () => {
 
   return (
     <MainContainer>
-      <Container>
+      <DarkDiv click={click} />
+        <Container>
         <PwrBtn />
-        <LogoSubComp />
-        <SocialSubComp />
+        <LogoSubComp theme={click ? 'dark' : 'light'} />
+        <SocialSubComp theme={click ? 'dark' : 'light'} />
         <Center click={click}>
           <YinYang onClick={()=> handleClick()} width={click ? 120 : 200} height={click ? 120 : 200} fill='currentColor' />
-          <span>click here</span>
+          <span style={{cursor: 'default'}}>click here</span>
         </Center>
         <Contact target="_blank" rel="noreferrer noopener" href="mailto:rjmombiela@gmail.com">
-          <h2>
+          <motion.h2
+            whileHover={{ scale: 1.1 }}
+            whileTap={{scale: 0.9}}
+          >
             Contact...
-          </h2>
+          </motion.h2>
         </Contact>
          <Projects to='/projects'>
-          <h2>
+          <motion.h2
+            whileHover={{ scale: 1.1 }}
+            whileTap={{scale: 0.9}}
+          >
             Projects
-          </h2>
+          </motion.h2>
         </Projects>
-        <Work to='/work'>
-          <h2>
+        <Work to='/work' click={click}>
+          <motion.h2
+            whileHover={{ scale: 1.1 }}
+            whileTap={{scale: 0.9}}
+          >
             Work
-          </h2>
+          </motion.h2>
         </Work>
         <BottomBar>
-          <About to='/about'>
-          <h2>
-            About Me
-          </h2>
+          <About to='/about' click={click}>
+            <motion.h2
+                whileHover={{ scale: 1.1 }}
+                whileTap={{scale: 0.9}}
+              >
+                About me
+              </motion.h2>
           </About>
           <Skills to='/skills'>
-          <h2>
-            My Skills
-          </h2>
+            <motion.h2
+              whileHover={{ scale: 1.1 }}
+              whileTap={{scale: 0.9}}
+            >
+              My Skills
+            </motion.h2>
         </Skills>
         </BottomBar>
       </Container>
+      {click ? <Intro click={click} /> : null}
     </MainContainer>
   )
 }
