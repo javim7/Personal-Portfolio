@@ -27,24 +27,24 @@ const SocialSubComp = () => {
   return (
     <Icons>
       <div>
-        <NavLink style={{color: 'inherit'}} target="_blank" to={{pathname:"https://github.com/javim7"}}>
+        <a style={{color: 'inherit'}} target="_blank" rel="noreferrer noopener" href="https://github.com/javim7">
           <Github width={25} height={25} fill ='currentColor' />
-        </NavLink>
+        </a>
       </div>
       <div>
-         <NavLink style={{color: 'inherit'}} target="_blank" to={{pathname:"https://github.com/javim7"}}>
+        <a style={{color: 'inherit'}} target="_blank" rel="noreferrer noopener" href="https://github.com/javim7">
           <Twitter width={25} height={25} fill ='currentColor' />
-        </NavLink>
+        </a>
       </div>
       <div>
-         <NavLink style={{color: 'inherit'}} target="_blank" to={{pathname:"https://github.com/javim7"}}>
+        <a style={{color: 'inherit'}} target="_blank" rel="noreferrer noopener" href="https://github.com/javim7">
           <Facebook width={25} height={25} fill ='currentColor' />
-        </NavLink>
+        </a>
       </div>
       <div>
-         <NavLink style={{color: 'inherit'}} target="_blank" to={{pathname:"https://github.com/javim7"}}>
+         <a style={{color: 'inherit'}} target="_blank" rel="noreferrer noopener" href="https://github.com/javim7">
           <YouTube width={25} height={25} fill ='currentColor' />
-        </NavLink>
+        </a>
       </div>
       <Line />
     </Icons>
