@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { NavLink } from 'react-router-dom'
 import styled, { keyframes } from 'styled-components'
 import { YinYang } from '../components/AllSvgs'
+import soccer from '../assets/svg/soccer.svg'
 import Intro from '../components/Intro'
 import LogoSubComp from '../subComponents/LogoSubComp'
 import PwrBtn from '../subComponents/PwrBtn'
@@ -101,7 +102,7 @@ align-items: center;
 transition: all 1s ease;
 
 &>:first-child{
-  animation: ${rotate} infinite 1.5s linear;
+  animation: ${rotate} infinite 2.5s linear;
 }
 
 &>:last-child{
@@ -136,7 +137,8 @@ const Main = () => {
         <LogoSubComp theme={click ? 'dark' : 'light'} />
         <SocialSubComp theme={click ? 'dark' : 'light'} />
         <Center click={click}>
-          <YinYang onClick={()=> handleClick()} width={click ? 120 : 200} height={click ? 120 : 200} fill='currentColor' />
+          {/* <YinYang onClick={()=> handleClick()} width={click ? 120 : 200} height={click ? 120 : 200} fill='currentColor' /> */}
+          <img src={soccer} onClick={()=> handleClick()} width={click ? 120 : 200} height={click ? 120 : 200} fill='currentColor' alt='soccer' />
           <span style={{cursor: 'default'}}>click here</span>
         </Center>
         <Contact target="_blank" rel="noreferrer noopener" href="mailto:rjmombiela@gmail.com">
