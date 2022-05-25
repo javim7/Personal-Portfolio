@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import {darkTheme} from '../components/Themes'
+import { darkTheme } from '../components/Themes'
 
 const Logo = styled.h1`
 display: inline-block;

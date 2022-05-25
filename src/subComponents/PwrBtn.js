@@ -1,5 +1,5 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom'
+import { NavLink, useNavigate } from 'react-router-dom'
 import styled from 'styled-components'
 import { PowerBtn } from '../components/AllSvgs'
 
@@ -32,10 +32,13 @@ cursor: pointer;
 `
 
 const PwrBtn = () => {
+
+  let navigate = useNavigate();
+
   return (
     <Power>
       <NavLink to="/" />
-      <PowerBtn width={30} height={30} fill='currentColor' />
+      <PowerBtn width={30} height={30} fill='currentColor' onClick={()=>navigate('/')} />
     </Power>
   )
 }

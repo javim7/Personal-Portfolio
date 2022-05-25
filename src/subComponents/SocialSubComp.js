@@ -1,8 +1,8 @@
 import React from 'react'
 // import { NavLink } from 'react-router-dom'
-import {darkTheme} from '../components/Themes'
+import { darkTheme } from '../components/Themes'
 import styled from 'styled-components'
-import { Facebook, Github, Twitter, YouTube } from '../components/AllSvgs'
+import { Instagram, Github, Twitter, Linkedin } from '../components/AllSvgs'
 
 const Icons = styled.div`
 display: flex;
@@ -33,18 +33,18 @@ const SocialSubComp = (props) => {
         </a>
       </div>
       <div>
-        <a style={{color: 'inherit'}} target="_blank" rel="noreferrer noopener" href="https://github.com/javim7">
+        <a style={{color: 'inherit'}} target="_blank" rel="noreferrer noopener" href="https://www.linkedin.com/in/javier-mombiela-a46b98158/">
+          <Linkedin  width={25} height={25} fill ={props.theme === 'dark' ? darkTheme.text : darkTheme.body }  />
+        </a>
+      </div>
+       <div>
+        <a style={{color: 'inherit'}} target="_blank" rel="noreferrer noopener" href="https://www.instagram.com/javimombiela/">
+          <Instagram width={25} height={25} fill ={props.theme === 'dark' ? darkTheme.text : darkTheme.body } />
+        </a>
+      </div>
+      <div>
+        <a style={{color: 'inherit'}} target="_blank" rel="noreferrer noopener" href="https://twitter.com/Javi_Mombiela">
           <Twitter width={25} height={25} fill ={props.theme === 'dark' ? darkTheme.text : darkTheme.body } />
-        </a>
-      </div>
-      <div>
-        <a style={{color: 'inherit'}} target="_blank" rel="noreferrer noopener" href="https://github.com/javim7">
-          <Facebook width={25} height={25} fill ={props.theme === 'dark' ? darkTheme.text : darkTheme.body } />
-        </a>
-      </div>
-      <div>
-         <a style={{color: 'inherit'}} target="_blank" rel="noreferrer noopener" href="https://github.com/javim7">
-          <YouTube width={25} height={25} fill ={props.theme === 'dark' ? darkTheme.text : darkTheme.body } />
         </a>
       </div>
       <Line color={props.theme} />
