@@ -7,6 +7,7 @@ import SocialIcons from '../subComponents/SocialSubComp'
 
 import {Blogs} from '../data/BlogData'
 import Blogcomponent from '../components/Blogcomponent'
+import AnchorComponent from '../subComponents/Anchor'
 
 const MainContainer = styled.div`
   background-image: url(${img});
@@ -47,6 +48,7 @@ const ProjectsPage = () => {
         <LogoSubComp />
         <PwrBtn />
         <SocialIcons />
+        <AnchorComponent />
         <Center>
           <Grid>
             {
