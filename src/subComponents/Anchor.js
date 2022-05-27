@@ -11,23 +11,23 @@ position: fixed;
 top: 0;
 right: 2rem;
 display: flex;
-flex-direction: column;
-align-items: center;
 justify-content: center;
+align-items: center;
+flex-direction: column;
 transform: translateY(-100%);
 
 .chain{
-  transform: rotate(135deg);  
+  transform: rotate(135deg);
 }
 `
 
 const PreDisplay = styled.div`
 position: absolute;
-top: 0;
+top:0;
 right: 2rem;
 `
 
-const AnchorComponent = () => {
+const AnchorComponent = (props) => {
 
   const ref = useRef(null);
   const hiddenRef = useRef(null);
@@ -69,7 +69,7 @@ const AnchorComponent = () => {
       </PreDisplay>
       <Slider ref ={ref}>
         {
-          [...Array(25)].map((x, id) => {
+          [...Array(props.numbers)].map((x, id) => {
             return <Link key={id} width={25} height={25} fill='currentColor' className="chain" />
           })
         }
