@@ -5,6 +5,7 @@ import { Design, Develope } from '../components/AllSvgs'
 import LogoSubComp from '../subComponents/LogoSubComp'
 import PwrBtn from '../subComponents/PwrBtn'
 import SocialSubComp from '../subComponents/SocialSubComp'
+import ParticleSubComp from '../subComponents/ParticleSubComp'
 
 const Box = styled.div`
 background-color: ${props => props.theme.body};
@@ -43,13 +44,13 @@ const Title = styled.h2`
   align-items: center;
   font-size: calc(1em + 1vw);
 
-   ${Main}:hover{
+   ${Main}:hover &{
     &>*{
       fill: ${props => props.theme.body};
     }
   }  
 
-  &*>:first-child{
+  &>*:first-child{
     margin-right: 1rem;
   }
 `
@@ -59,6 +60,10 @@ const Description = styled.div`
   font-size: calc(0.6em + 1vw);
   padding: 0.5rem 0;
   
+  ${Main}:hover &{
+     color: ${props => props.theme.body};
+  } 
+
   strong{
     margin-bottom: 1rem;
     text-transform: uppercase;
@@ -76,18 +81,19 @@ const SkillsPage = () => {
         <LogoSubComp theme='light' />
         <SocialSubComp theme='light' />
         <PwrBtn theme='light' />
+        <ParticleSubComp theme='light' />
         <Main>
           <Title>
             <Design width={40} height={40} /> Designer
           </Title>
           <Description>
-            I love to create design which speaks, Keep it clean, minimal and simple.
+            I am able to create neat and modern designs, which are visually appealing and easy to navigate. 
           </Description>
            <Description>
             <strong>I like to Design</strong>
             <ul>
               <li>Web Pages</li>
-              <li>Moble Apps</li>
+              <li>Mobile Apps</li>
             </ul>
           </Description>
            <Description>
@@ -102,11 +108,11 @@ const SkillsPage = () => {
             <Develope width={40} height={40} /> Web Developer
           </Title>
           <Description>
-            I value business or brand for which i'm creating, thus i enjoy bringing new ideas to life.
+            I am able to build a complete website from scratch, including the Frontend and Backend, to ensure maximum performance.
           </Description>
            <Description>
             <strong>Developer Skills</strong>
-            <p>Html, Css, Js, React, Firebase, Lint, Jest</p>
+            <p>Html, Css, Js, React, Firebase, SQL, Lint, Jest</p>
           </Description>
            <Description>
             <strong>Tools I Use</strong>
