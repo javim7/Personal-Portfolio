@@ -24,7 +24,7 @@ transform: translateY(-100%);
 const PreDisplay = styled.div`
 position: absolute;
 top:0;
-right: 2rem;
+right: 3rem;
 `
 
 const AnchorComponent = (props) => {

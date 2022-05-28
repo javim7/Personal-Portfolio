@@ -87,7 +87,7 @@ const SkillsPage = () => {
             <Design width={40} height={40} /> Designer
           </Title>
           <Description>
-            I am able to create neat and modern designs, which are visually appealing and easy to navigate. 
+            I am able to create neat and modern designs. I focus on making them visually appealing and easy to navigate. 
           </Description>
            <Description>
             <strong>I like to Design</strong>
@@ -108,7 +108,7 @@ const SkillsPage = () => {
             <Develope width={40} height={40} /> Web Developer
           </Title>
           <Description>
-            I am able to build a complete website from scratch, including the Frontend and Backend, to ensure maximum performance.
+            I am able to build a complete, optimal website from scratch, including the Frontend and Backend.
           </Description>
            <Description>
             <strong>Developer Skills</strong>

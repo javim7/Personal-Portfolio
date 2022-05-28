@@ -69,9 +69,8 @@ const AboutPage = () => {
           <br /> <br />
           I am really interested in full-stack development, since I really like designing eye-catching applications, but I also enjoy setting up a secure and organized backend for the page to be complete.
           <br /> <br />
-          I always like to challenge myself, since I know I am capable of many things, and I really enjoy solving problems because I think there is no problem that can't be solved.
-          <br /> <br />
-          Hobbies: Playing soccer, gaming, working out, and having fun
+          I always like to challenge myself because I know I am capable of many things, and I really enjoy solving problems because I think that there is no problem that can't be solved.
+          
         </Main>
       </Box>
     </ThemeProvider>
