@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { NavLink } from 'react-router-dom'
 import styled, { keyframes } from 'styled-components'
-import { YinYang } from '../components/AllSvgs'
+import { YinYang, Soccer } from '../components/AllSvgs'
 import soccer from '../assets/svg/soccer.svg'
 import Intro from '../components/Intro'
 import LogoSubComp from '../subComponents/LogoSubComp'
@@ -138,7 +138,7 @@ const Main = () => {
         <SocialSubComp theme={click ? 'dark' : 'light'} />
         <Center click={click}>
           {/* <YinYang onClick={()=> handleClick()} width={click ? 120 : 200} height={click ? 120 : 200} fill='currentColor' /> */}
-          <img src={soccer} onClick={()=> handleClick()} width={click ? 120 : 200} height={click ? 120 : 200} fill='currentColor' alt='soccer' />
+          <Soccer onClick={()=> handleClick()} width={click ? 120 : 200} height={click ? 120 : 200} fill='currentColor' />
           <span style={{cursor: 'default'}}>click here</span>
         </Center>
         <Contact target="_blank" rel="noreferrer noopener" href="mailto:rjmombiela@gmail.com">
