@@ -1,7 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
+import {motion} from 'framer-motion'
 
-const Box = styled.a`
+const Box = styled(motion.a)`
 width: calc(10rem + 15vw);
 text-decoration: none;
 height: 20rem;
@@ -62,12 +63,31 @@ const Date = styled.span`
 padding: 0.5rem 0;
 `
 
+const Container = styled(motion.div)``
+
+//framer motion setup
+const Item = {
+    hidden:{
+        scale:0
+    },
+    show:{
+        scale:1,
+        transition: {
+            type: 'spring',
+            duration: 0.5
+        }
+    }
+}
+
 const Blogcomponent = (props) => {
 
   const {name, tags, date, imgSrc, link} = props.blog
 
   return (
-    <Box target="_blank" rel="noreferrer noopener" href={link}>
+    <Container
+      variants={Item}
+    >
+      <Box target="_blank" rel="noreferrer noopener" href={link}>
       <Image img={imgSrc} />
       <Title>{name}</Title>
       <HashTags>
@@ -81,6 +101,7 @@ const Blogcomponent = (props) => {
         {date}
       </Date>
     </Box>
+    </Container>
 
   )
 

@@ -6,6 +6,7 @@ import PwrBtn from '../subComponents/PwrBtn'
 import SocialSubComp from '../subComponents/SocialSubComp'
 import ParticleSubComp from '../subComponents/ParticleSubComp'
 import astronaut from '../assets/Images/spaceman.png'
+import BigTitle from '../subComponents/BigTitle'
 
 const Box = styled.div`
 background-color: ${props => props.theme.body};
@@ -72,6 +73,7 @@ const AboutPage = () => {
           I always like to challenge myself because I know I am capable of many things, and I really enjoy solving problems because I think that there is no problem that can't be solved.
           
         </Main>
+        <BigTitle text='ABOUT' top='10%' left='5%' />
       </Box>
     </ThemeProvider>
    

@@ -1,8 +1,7 @@
 import React, { useState } from 'react'
 import { NavLink } from 'react-router-dom'
 import styled, { keyframes } from 'styled-components'
-import { YinYang, Soccer } from '../components/AllSvgs'
-import soccer from '../assets/svg/soccer.svg'
+import { Soccer } from '../components/AllSvgs'
 import Intro from '../components/Intro'
 import LogoSubComp from '../subComponents/LogoSubComp'
 import PwrBtn from '../subComponents/PwrBtn'
@@ -143,6 +142,14 @@ const Main = () => {
         </Center>
         <Contact target="_blank" rel="noreferrer noopener" href="mailto:rjmombiela@gmail.com">
           <motion.h2
+            initial={{
+              y: -200,
+              transition: {type: 'spring', duration: 1.5, delay: 1}
+            }}
+             animate={{
+              y: 0,
+              transition: {type: 'spring', duration: 1.5, delay: 1}
+            }}
             whileHover={{ scale: 1.1 }}
             whileTap={{scale: 0.9}}
           >
@@ -151,6 +158,14 @@ const Main = () => {
         </Contact>
          <Projects to='/projects'>
           <motion.h2
+              initial={{
+              y: -200,
+              transition: {type: 'spring', duration: 1.5, delay: 1}
+            }}
+             animate={{
+              y: 0,
+              transition: {type: 'spring', duration: 1.5, delay: 1}
+            }}
             whileHover={{ scale: 1.1 }}
             whileTap={{scale: 0.9}}
           >
@@ -159,6 +174,14 @@ const Main = () => {
         </Projects>
         <Work to='/work' click={click}>
           <motion.h2
+              initial={{
+              y: -200,
+              transition: {type: 'spring', duration: 1.5, delay: 1}
+            }}
+             animate={{
+              y: 0,
+              transition: {type: 'spring', duration: 1.5, delay: 1}
+            }}
             whileHover={{ scale: 1.1 }}
             whileTap={{scale: 0.9}}
           >
@@ -168,6 +191,14 @@ const Main = () => {
         <BottomBar>
           <About to='/about' click={click}>
             <motion.h2
+                initial={{
+              y: 200,
+              transition: {type: 'spring', duration: 1.5, delay: 1}
+            }}
+             animate={{
+              y: 0,
+              transition: {type: 'spring', duration: 1.5, delay: 1}
+            }}
                 whileHover={{ scale: 1.1 }}
                 whileTap={{scale: 0.9}}
               >
@@ -176,6 +207,14 @@ const Main = () => {
           </About>
           <Skills to='/skills'>
             <motion.h2
+                initial={{
+              y: 200,
+              transition: {type: 'spring', duration: 1.5, delay: 1}
+            }}
+             animate={{
+              y: 0,
+              transition: {type: 'spring', duration: 1.5, delay: 1}
+            }}
               whileHover={{ scale: 1.1 }}
               whileTap={{scale: 0.9}}
             >

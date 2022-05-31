@@ -8,8 +8,10 @@ import {Blogs} from '../data/BlogData'
 import Blogcomponent from '../components/Blogcomponent'
 import AnchorComponent from '../subComponents/Anchor'
 import PwrBtn from '../subComponents/PwrBtn'
+import BigTitle from '../subComponents/BigTitle'
+import{motion} from 'framer-motion'
 
-const MainContainer = styled.div`
+const MainContainer = styled(motion.div)`
   background-image: url(${img});
   background-size: cover;
   background-repeat: no-repeat;
@@ -49,9 +51,31 @@ const ProjectsPage = () => {
   }, [])
   
 
+  // Framer-motion stup
+const container = {
+
+    hidden: {opacity:0},
+    show: {
+      opacity:1,
+  
+      transition:{
+        staggerChildren: 0.5,
+        duration: 0.5,
+      }
+    }
+  
+  }
+
  return (
 
-    <MainContainer>
+   <MainContainer
+      variants={container}
+      initial='hidden'
+      animate='show'
+      exit={{
+          opacity:0, transition:{duration: 0.5}
+      }}
+   >
       <Container>
         <LogoSubComp />
         <SocialIcons />
@@ -65,7 +89,8 @@ const ProjectsPage = () => {
               })
             }
           </Grid>
-        </Center>
+       </Center>
+       <BigTitle text='PROJECTS' top='5rem' left='5rem' />
       </Container>
     </MainContainer>
   )

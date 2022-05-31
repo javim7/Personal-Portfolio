@@ -8,16 +8,18 @@ import Card from '../subComponents/Card'
 import LogoSubComp from '../subComponents/LogoSubComp'
 import PwrBtn from '../subComponents/PwrBtn'
 import SocialSubComp from '../subComponents/SocialSubComp'
+import {motion} from 'framer-motion'
 
 const Box = styled.div`
 background-color: ${props => props.theme.body};
 
 height: 250vh;
 position: relative;
-overflow: hidden;
+display: flex;
+align-items: center;
 `
 
-const Main = styled.ul`
+const Main = styled(motion.ul)`
 position: fixed;
 top: 12rem;
 left:calc(10rem + 15vw);
@@ -35,6 +37,21 @@ const Rotate = styled.span`
   height: 80px;
   z-index: 1;
 `
+
+// framer motion setup
+const container = {
+
+  hidden: {opacity:0},
+  show: {
+    opacity:1,
+
+    transition:{
+      staggerChildren: 0.5,
+      duration: 0.5,
+    }
+  }
+
+}
 
 const WorkPage = () => {
 
@@ -62,7 +79,7 @@ const WorkPage = () => {
         <LogoSubComp theme='dark' />
         <SocialSubComp theme='dark' />
         <PwrBtn />
-        <Main ref={ref}>
+         <Main ref={ref}   variants={container} initial='hidden' animate='show'  >
           {
             Work.map(d =>
               <Card key={d.id} data={d} />
