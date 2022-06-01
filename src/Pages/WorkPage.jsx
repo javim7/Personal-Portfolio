@@ -63,7 +63,14 @@ const WorkPage = () => {
 
     const rotate = () => {
       element.style.transform = `translateX(${-window.pageYOffset}px)`
-      scrollRef.current.style.transform = `rotate(`+ window.pageYOffset + 'deg)'
+ 
+      try {
+       scrollRef.current.style.transform = `rotate(` + window.pageYOffset + 'deg)'
+      } catch (error) {
+        console.error(error);
+        // expected output: ReferenceError: nonExistentFunction is not defined
+        // Note - error messages will vary depending on browser
+      }
     }
 
     window.addEventListener('scroll', rotate)
