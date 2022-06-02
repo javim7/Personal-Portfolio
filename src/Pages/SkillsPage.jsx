@@ -81,7 +81,7 @@ const SkillsPage = () => {
       <Box>
         <LogoSubComp theme='light' />
         <SocialSubComp theme='light' />
-        <PwrBtn theme='light' />
+        <PwrBtn theme='light' left='50%' />
         <ParticleSubComp theme='light' />
         <Main>
           <Title>

@@ -132,7 +132,7 @@ const Main = () => {
     <MainContainer>
       <DarkDiv click={click} />
         <Container>
-        <PwrBtn />
+        <PwrBtn left='50%' />
         <LogoSubComp theme={click ? 'dark' : 'light'} />
         <SocialSubComp theme={click ? 'dark' : 'light'} />
         <Center click={click}>

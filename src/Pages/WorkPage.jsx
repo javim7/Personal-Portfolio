@@ -85,7 +85,7 @@ const WorkPage = () => {
       <Box>
         <LogoSubComp theme='dark' />
         <SocialSubComp theme='dark' />
-        <PwrBtn />
+        <PwrBtn left='50.4%'/>
          <Main ref={ref}   variants={container} initial='hidden' animate='show'  >
           {
             Work.map(d =>

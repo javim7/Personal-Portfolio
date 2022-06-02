@@ -79,7 +79,7 @@ const container = {
       <Container>
         <LogoSubComp />
         <SocialIcons />
-        <PwrBtn />
+        <PwrBtn left='50.45%' />
         <AnchorComponent numbers={numbers} />
         <Center>
           <Grid>

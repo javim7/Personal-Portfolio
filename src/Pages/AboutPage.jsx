@@ -60,7 +60,7 @@ const AboutPage = () => {
       <Box>
         <LogoSubComp theme='dark' />
         <SocialSubComp theme='dark' />
-        <PwrBtn />
+        <PwrBtn left='50%'/>
         <ParticleSubComp theme='dark' />
         <Spaceman>
           <img src={astronaut} alt="spaceman" />
