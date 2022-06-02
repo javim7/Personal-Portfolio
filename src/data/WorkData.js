@@ -2,58 +2,58 @@ export const Work = [
     {
         id:1,
         name:"Web Development",
-        description:"It is build on top of the React JS, with styledComponents and GSAP for smooth scrolling animations.",
-        tags:["react","gsap","styledComponents"],
+        description:"This course inroduced intermediate to advanced Web page development and design techniques.",
+        tags:["html","css", "javascript", "react", "lint", "jest", "node"],
         
-        demo:"https://agency-website-eta.vercel.app/",
-        github:"https://github.com/codebucks27/Agency-website"
+        demo:"https://opensea---clone.web.app/",
+        github:"https://github.com/javim7/OpenSea-Clone"
     },
     {
         id:2,
-        name:"Job listing website",
-        description:"A Job listing website build in ReactJS. With searching and filtering functionalities.",
-        tags:["react","sass"],
-        
-        demo:"http://react-job-listing-website.codebucks27.vercel.app/",
-        github:"https://github.com/codebucks27/react-job-listing-website"
+        name:"Data Bases 1",
+        description:"This course helps students to delve into the capture, digitization, organization, transformation, and presentation of information.",
+        tags:["psql","mysql", "sql", "business inteligence", "relational algebra"],
+
+        demo:"https://memeflix-61c49.web.app",
+        github:"https://github.com/her20053/Proyecto-2-BD"
         
     },
     {
         id:3,
-        name:"Dev.to Clone",
-        description:"A clone of Dev.to build using ReactJS. With realtime fetching of articles from dev.to using API.",
-        tags:["react","api","sass"],
+        name:"Software Engineering",
+        description:"This course covers the fundamentals of software engineering, and the application of engineering tools.",
+        tags:["scrum","api","git"],
         
-        demo:"http://devto-clone-codebucks27.vercel.app/",
-        github:"https://github.com/codebucks27/devto-clone"
+        demo:"https://github.com/Ingenebrios/2022-mantine-vite-final-ingenieria",
+        github:"https://github.com/Ingenebrios/2022-mantine-vite-final-ingenieria"
     },
     {
         id:4,
-        name:"Sidebar Menu",
-        description:"A cool looking sidebar menu build using ReactJS and styledComponents.It has really smooth animations.",
-        tags:["react","styledComponents","react-router"],
+        name:"Algorithms and Data Structures",
+        description:"The course focuses on essential topics in data structures, including array-based lists, recursion, binary trees, heaps, graphs, and more.",
+        tags:["java","python","github"],
         
-        demo:"https://react-sidebar.vercel.app/",
-        github:"https://github.com/codebucks27/react-sidebar"
+        demo:"https://github.com/javim7/Proyecto-Sistema-Recomendaciones",
+        github:"https://github.com/javim7/Proyecto-Sistema-Recomendaciones"
        
     },{
         id:5,
-        name:"Todo App(React + Redux)",
-        description:"A todo app build using Redux-toolkit and framer-motion for smooth animations.",
-        tags:["react","redux","framer-motion"],
+        name:"Object Oriented Programming",
+        description:"This course emphasizes current techniques in object oriented design, analysis, and programming.",
+        tags:["java"],
         
-        demo:"http://react-redux-todo-app-git-main-codebucks27.vercel.app/",
-        github:"https://github.com/codebucks27/React-Redux-Todo-App"
+        demo:"https://github.com/javim7/HT6",
+        github:"https://github.com/javim7/HT6"
         
     },
     {
         id:6,
-        name:"Responsive Navigation Menu",
-        description:"A reponsive navbar menu component in ReactJS with react-router functionalities. Built from scratch.",
-        tags:["react","react-router","css"],
+        name:"Mobile Platfrom Programming",
+        description:"This course introduces students to programming technologies, design and development related to mobile applications.",
+        tags:["kotlin","android studio"],
         
-        demo:"http://react-responsive-navbar-codebucks27.vercel.app/",
-        github:"https://github.com/codebucks27/React-responsive-navbar"
+        demo:"https://github.com/javim7/tallerLogInGoogle",
+        github:"https://github.com/javim7/tallerLogInGoogle"
         
     },
     
